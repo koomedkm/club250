@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<link rel="stylesheet" type="text/css" href="club250/250.css">-->
+    <title>club 250</title>
+</head>
+
+<body>
+    <form action="/" method="post">
+        <label> Who just sent the money</label>
+        <select name="contributor">
+            <option>Ernest</option>
+            <option>Wakomo</option>
+            <option>Karago</option>
+            <option>Wechuli</option>
+            <option>Munguti</option>
+            <option>Sam</option>
+            <option>Lukas</option>
+            <option>Steve</option>
+            <option>Dalton</option>
+            <option>Koome</option>
+            <option>Gichui</option>
+        </select>
+        <br>
+        <label>How much did they send?:</label>
+        <input type="number" name="amount" value="250"></input>
+        <!-- amount: 250 -->
+        <br>
+
+        <label>Date sent</label>
+        <input type="date" name="date"></input>
+        <!-- date-sent: 12/12/2002 -->
+        <br>
+        <label>Time sent</label>
+        <input type="time" name="time"></input>
+        <br>
+        <label>Being in payment for:</label>
+        <select name="paymentFor">
+            <option>Past 1 week</option>
+            <option>Past 2 weeks</option>
+            <option>Past 3 weeks</option>
+            <option>Past 4 weeks</option>
+            <input>Other</input>
+        </select>
+        <br>
+            <button type="submit">Submit</button>
+    </form>
+</body>
+
+</html>
