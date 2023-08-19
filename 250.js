@@ -26,13 +26,28 @@ app.use(express.json());
 
 app.post("/", async (req, res) => {
   const contribution = new Contribution(req.body);
+  const contributor = req.body.contributor;
+  const amount = req.body.amount;
+  const reason = req.body.paymentFor;
+  console.log(reason);
   console.log(contribution);
   try {
     savedContribution = await contribution.save();
-    res.status(201).redirect("/");
+    console.log(`The saved contribution is ${savedContribution}`);
+    res
+      .status(201)
+      .redirect(`/contributions?contributor=${contributor}&amount=${amount}&reason=${reason}`);
   } catch (error) {
     console.log(error);
   }
+});
+
+app.get("/contributions", (req, res) => {
+  const contributor = req.query.contributor;
+  const amount = req.query.amount;
+  const reason = req.query.reason;
+  console.log(contributor, amount, reason);
+  res.render("contributions", { contributor, amount, reason });
 });
 
 app.get("/", (req, res) => {
