@@ -1,11 +1,15 @@
 {
   "name": "club250",
   "version": "1.0.0",
+  "engines": {
+    "node": "18.x"
+  },
   "description": "This repo contains code for a tool for monitoring inflows into club250",
   "main": "250.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon 250",
+    "build": "npm install",
     "start": "node 250"
   },
   "author": "",
@@ -14,8 +18,7 @@
     "dotenv": "^16.3.1",
     "ejs": "^3.1.9",
     "express": "^4.18.2",
-    "flash": "^1.1.0",
-    "mongoose": "^7.4.3"
+    "mongoose": "^7.4.4"
   },
   "devDependencies": {
     "nodemon": "^3.0.1"
